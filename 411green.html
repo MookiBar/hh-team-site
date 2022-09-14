@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!---
+Added A CSS template from this website
+https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_templates_start_page&stacked=h
+
+so our website looks a bit nicer.
+Still gotta link up all of the current docs,
+images and other links to the css links,
+and make seperate pages for each major deliverable
+but this is a good start.
+--->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-coffee,.fa-check-square,.fa-hand-spock-o,.fa-grav,.fa-life-saver,.fa-solid, .fa-book, .fa-wrench, .fa-exclamation-circle {font-size:200px}
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+html{
+  scroll-behavior: smooth;
+}
+.headbgimg {
+  -obackground-size: auto 90%;
+  -webkit-background-size: auto 90%;
+  -khtml-background-size: auto 90%;
+  -moz-background-size: auto 90%;
+  background-position: center center;
+  background-image: url("img/other/hands1.png");
+  background-repeat: no-repeat
+}
+
+.wrapper{
+  text-align: center;
+
+}
+.wrapper .row {
+  display: flex;
+  width: auto;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.wrapper .row .team-member{
+  width: 400px;
+  margin-right:4px;
+  margin-left: 4px;
+  margin-bottom: 8px;
+  background-color: #e8e8e8;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+
+}
+
+.wrapper .row .team-member .member-img{
+  width: 340px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.wrapper .row .team-member .member-img img{
+  height: 340px;
+}
+
+.wrapper .row .team-member p{
+  margin-top: 18px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+@media screen and (max-width: 936px) {
+  .wrapper .row{
+    flex-direction: column; 
+    max-width: 100%;
+  }
+  .wrapper .row .team-member{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+
+  }
+  .wrapper .row .team-member .member-img{
+    max-width: 100%;
+
+  }
+  .wrapper .row .team-member .member-img img{
+    max-width:100%;
+
+  }
+  .links a{
+    text-decoration: none;
+    color: #000000;
+    text-align: center;
+  }
+  .links a:hover{
+    color: grey;
+  }
+
+}
+
+  .google-slides-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Ratio */
+    height: 0;
+    overflow: hidden;
+  }
+  .google-slides-container iframe {
+    border: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .teamGreenTogether{
+    max-width: 720px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .teamGreenTogether img{
+    padding-top: 50px;
+    width: 100%;
+  }
+
+  .links a{
+    text-decoration: none;
+    color: #000000;
+    text-align: center;
+  }
+  .links a:hover{
+    color: grey;
+  }
+
+
+.container{
+  position: relative;
+  min-height:100vh;
+  padding-bottom: 80px;
+}
+ 
+.container h1{
+  padding:15px;
+  text-align: center;
+  padding-top: 40px;
+}
+
+.container .image-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap:15px;
+  justify-content: center;
+  padding: 10px;
+}
+.container .image-container h6{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.container .image-container .image{
+  height: 250px;
+  width: 350px;
+  border:10px solid #E5E4E2;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  cursor: pointer;
+}
+.container .image-container .image img{
+  height: 90%;
+  width: 100%;
+  object-fit: cover;
+  transition: 0.2s linear;
+}
+.container .image-container .image:hover img{
+  transform: scale(1.1);
+}
+.container .popup-image{
+  position: fixed;
+  top:0; left:0;
+  background: rgba(0, 0, 0, 0.9);
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  display: none;
+}
+.container .popup-image span{
+  position: absolute;
+  top:0; left:0;
+  font-size: 60px;
+  font-weight: bolder;
+  color: #fff;
+  cursor:pointer;
+  padding-left: 20px;
+}
+
+.container .popup-image img{
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  border: 5px solid #fff;
+  border-radius: 5px;
+  width: 950px;
+  object-fit: cover;
+}
+
+@media (max-width:768px){
+  .container .popup-image img{
+    width: 95%;
+  }
+}
+
+#prototype{
+  background-color: #E5E4E2;
+}
+
+</style>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>CS-411W Team Green</title>
+
+</head>
+
+<body id="page-top" class="index">
+
+
+
+
+<!--- The actual css template. --->
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-red w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#home" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+    <a href="#problemstatement" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Problem</a>
+    <a href="#solution" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Solution</a>
+    <a href="#presentations" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Presentations</a>
+    <a href="#deliverables" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Deliverables</a>
+    <a href="#prototype" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Prototype</a>    
+    <a href="#labs" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Labs</a>
+    <a href="#userstories" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">User Stories</a>
+    <a href="#team" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Team</a>
+    <a href="#glossary" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Glossary</a>
+    <a href="#references" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">References</a>
+
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="#problemstatement" class="w3-bar-item w3-button w3-padding-large">Problem</a>
+    <a href="#solution" class="w3-bar-item w3-button w3-padding-large">Solution</a>
+    <a href="#presentations" class="w3-bar-item w3-button w3-padding-large">Presentations</a>
+    <a href="#deliverables" class="w3-bar-item w3-button w3-padding-large">Deliverables</a>
+    <a href="#labs" class="w3-bar-item w3-button w3-padding-large">Labs</a>
+    <a href="#userstories" class="w3-bar-item w3-button w3-padding-large">User Stories</a>
+    <a href="#team" class="w3-bar-item w3-button w3-padding-large">Team</a>
+    <a href="#glossary" class="w3-bar-item w3-button w3-padding-large">Glossary</a>
+    <a href="#references" class="w3-bar-item w3-button w3-padding-large">References</a>
+  </div>
+</div>
+
+<!-- Header -->
+<section id="home">
+<div>
+  <!-- <header class="w3-container w3-red w3-center" position="absolute" style="background-image: url('img/other/hands1.png'); background-repeat: no-repeat; background-height: 90% auto; padding:128px 16px">-->
+<header class="w3-container w3-red w3-center headbgimg">
+  <br><br><br>
+    <h1 class="w3-margin w3-jumbo">Helping Hands</h1>
+    <p class="w3-xlarge">A Solution for Those in Need</p>
+<br><br><br>
+    <!-- <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Started</button> <!-- << lol. pointless button... TODO ? -->
+  </header>
+</div>
+</section>
+
+<!-- START GRID1 : PROBLEM STATEMENT -->
+
+<section id="problemstatement">
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-twothird">
+      <h1>Problem Statement</h1>
+      <h5 class="w3-padding-16">Government agencies and charities fall short of effectively collaborating, sharing data, conveying important information and staying current with situations that affect at-risk members of the public.
+      At-risk individuals give up on help when those organizations either lack clarity, lack accountability, seem confusing or remain entirely unknown.
+      </h5>
+
+      <p class="w3-text-grey">The existing process for anyone seeking help from charities relies on pre-existing knowledge and haphazard availability of information. The process only gets worse when seeking government assistance.<br>
+      Similarly, volunteers must rely on haphazard communication and unmaintained websites for insight on where to go and what to do. Once they begin a role, they find it governed by chaotic mismanagement and a further dirth of communication.<br>
+      Providers of government assistance or charities often do not have the resources, knowledge or availability to properly maintain a digital presence that makes the necessary information readily available and easily understood.</p>
+    
+      <br>
+      <h1 class="w3-padding-16">Characteristics</h1>
+      <h4 >Government Services and Charities do not achieve their outreach/service goals when...</h3>
+      <ul style="font-size:16px">
+        <li>People don’t know they exist or don’t know what programs are available</li>
+        <li>Their online presence is lacking, confusing or non-existent</li>
+        <li>Trust and/or transparency is lacking</li>
+        <li>Staff/volunteers are poorly trained and lack situational awareness</li>
+        <li>Changes are not communicated properly</li>
+        <li>Collaboration is non-existent</li>
+      </ul>
+
+    </div>
+
+    <div class="w3-third w3-center">
+      <i class="fa fa-exclamation-circle w3-padding-64 w3-text-red"></i>
+    </div>
+  </div>
+</div>
+</section>
+<!-- END GRID1 : PROBLEM STATEMENT -->
+
+<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+    <h1 class="w3-margin w3-xlarge">Help is available. Why can't anyone find it?</h1>
+</div>
+
+<!-- START : SOLUTION STATEMENT -->
+
+<section id="solution">
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-twothird">
+      <h1 >Solution Statement</h1>
+      <h5 class="w3-padding-32">The Helping Hands platform will aim to simplify the process of connecting those in 
+        need with the appropriate resources by discovering the user’s specific circumstances and tailoring a unique 
+        solution for their dilemma.
+      </h5>
+
+      <h1 >Characteristics</h1>
+      <ul style="font-size:16px">
+        <li>Questions to answers: Guided Links</li>
+        <li>Near real-time updates: Online Forum for each page</li>
+        <li>Service provider fills templated info or server scrapes web data</li>
+        <li>Link and explain legal/policy caveats</li>
+        <li>HelpMe button connection to provider</li>
+      </ul>
+
+    </div>
+
+    <div class="w3-third w3-center">
+      <i class="fa fa-life-saver w3-padding-64 w3-text-red"></i>
+    </div>
+  </div>
+</div>
+
+</section>
+
+<!-- END : SOLUTION STATEMENT -->
+
+
+<!-- START GRID2 : PRESENTATIONS -->
+<section id="presentations">
+	<!-- TODO: feasibility presentation, original problem slides -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-third">
+	    <!--<i class="fa fa-coffee w3-padding-64 w3-text-red w3-margin-right">&#8659;</i>-->
+        <i class="fa fa-coffee w3-text-red w3-margin-right"></i>
+    </div>
+
+    <h1>Presentations</h1>
+    <h5 class="w3-padding-32">Slideshows and diagrams traversing the problem set...</h5>
+
+    <div class="slides">
+    <br><br>
+    <h3 class="section-subheading text-muted">Original Problem Presentation</h3>
+    <div class="google-slides-container">
+    <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTl594NqQe3b_OULdW9E8dlbnm4vbgO1cVk0ayFq-YnWiKDix5_Dm-8dTwri7eEfQ/embed?start=false&loop=false&delayms=60000" frameborder="0" width="900" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+    </div>
+    <a href="doc/original_problem_presentation.pptx">Download Powerpoint...</a>
+
+    <br><br>
+    <h3 class="section-subheading text-muted">Feasibility Presentation v1</h3>
+    <div class="google-slides-container">
+    <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSxoD-GS6dInHaUWJrczTgbe01L_HBjMjTeyTHAoUxH__aJP8zqD0pp29nC2fr_fY5ga5R5FSDCR2Nh/embed?start=false&loop=false&delayms=60000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+    </div>
+    <a href="doc/Draft_Feasibility_Pres.pptx">Download Powerpoint...</a>
+
+    <br><br>
+    <h3 class="section-subheading text-muted">Feasibility Presentation v2</h3>
+    <div class="google-slides-container">
+    <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTtaS1I55MPwZoZeG5MivbtvAUDKeY_fpYtQPBqlJUExBHVkwFkvwT1UF-30sGQQ-TKMhUL5sx2ye6Z/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+    </div>
+    <a href="doc/Feasiblityv2.pptx">Download Powerpoint...</a>
+
+    <br><br>
+    <h3 class="section-subheading text-muted">Design Presentation</h3>
+    <div class="google-slides-container">
+	    <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vR6iVpij9rbrjMwJovHBLFup93Wc4rsCLrGnwt0MZkuAtUfkU0Kd7CuAhVpGdwMNxoO_eW-hWUHcoWh/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+    </div>
+    <a href="doc/Design_Presentation.pptx">Download Powerpoint...</a>
+    <br><br>
+
+    <h3 class="section-subheading text-muted">Prototype Presentation</h3>
+    <div class="google-slides-container">
+	    <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTC7Bc4q4DIYm7NtD36Oje_H-IS4YA2Bk_W9hZe6Isaj1sdcRcbF2jnHF0VO7tx9gA9e5jbY6bN9Ibt/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+    </div>
+    <a href="doc/Draft_Prototype_Pres.pptx">Download Powerpoint...</a>
+    <br><br>
+
+  </div>
+</div>
+
+</div>
+</section>
+<!-- END GRID2 : PRESENTATIONS -->
+
+
+<!-- START GRID3 : DELIVERABLES -->
+<section id="deliverables">
+	<!-- TODO: process flow diagrams, MFCD -->
+  <div class="w3-content">
+    <div class="w3-twothird w3-padding-32">
+      <h1>Deliverables</h1>
+      <h5 class="w3-padding-32">
+	      Iterating through the problem and defining solutions...
+      </h5>
+    </div>
+    <div class="deliverableTitle"></div>
+      <i class="fa fa-check-square w3-padding-16 w3-text-red"></i>
+    </div>
+  </div>
+  <br>
+
+<div class="container">
+        <h1>Feasibility</h1>
+  <div class="image-container">
+          <div class="image">
+              <h6>Current Process Flow</h6>
+		        <img src="img/diagrams/current_processflow.png" class="diagramImage" alt="Current Process Flow">
+          </div>
+          <div class="image">
+              <h6>Solution Process Flow</h6>
+		        <img src="img/diagrams/solution_processflow.png" class="diagramImage" alt="Current Process Flow">
+          </div>
+  </div>
+  <div class="image-container">
+          <div class="image">
+              <h6>User Risk Matrix</h6>
+		        <img src="img/diagrams/userRisk_matrix.png" class="diagramImage" alt="Current Process Flow">
+          </div>
+          <div class="image">
+              <h6>Technical Risks Matrix</h6>
+		        <img src="img/diagrams/technicalRisk_matrix.png" class="diagramImage" alt="Current Process Flow">
+          </div>
+          <div class="image">
+            <h6>Security Risk Matrix</h6>
+		        <img src="img/diagrams/securityRisk_matrix.png" class="diagramImage" alt="Current Process Flow">
+          </div>
+    </div>
+  <div class="image-container">
+          <div class="image">
+            <h6>Prototype MFCD</h6>
+		        <img src="img/diagrams/proto_MFCD.png" class="diagramImage" alt="Current Process Flow">
+          </div>
+          <div class="image">
+            <h6>Collaboration Matrix</h6>
+		        <img src="img/diagrams/collab_matrix.png" class="diagramImage" alt="Current Process Flow">
+          </div>
+    </div>
+
+      <h1>Algorithms</h1>
+
+  <div class="image-container">
+      <div class="image">
+            <h6>Search Algorithm</h6>
+		        <img src="img/diagrams/searchAlgo.png" class="diagramImage" alt="Current Process Flow">
+        </div>
+
+        <div class="image">
+            <h6>Localization Algorithm</h6>
+		        <img src="img/diagrams/localizationAlgo.png" class="diagramImage" alt="Current Process Flow">
+        </div>
+      </div>
+  <div class="image-container">
+        <div class="image">
+            <h6>Webscraping Algorithm</h6>
+		        <img src="img/diagrams/webscrapingAlgo.png" class="diagramImage" alt="Current Process Flow">
+        </div>
+
+        <div class="image">
+            <h6>Metrics Algorithm</h6>
+		        <img src="img/diagrams/metricsAlgo.png" class="diagramImage" alt="Current Process Flow">
+        </div>
+    </div>
+
+      <h1>Work Breakdown Structures</h1>
+
+  <div class="image-container">
+      <div class="image">
+            <h6>Overview Breakdown</h6>
+		        <img src="img/diagrams/overviewBreakdown.png" class="diagramImage" alt="Current Process Flow">
+        </div>
+
+        <div class="image">
+            <h6>Algorithm Breakdown</h6>
+		        <img src="img/diagrams/algoBreakdown.png" class="diagramImage" alt="Current Process Flow">
+        </div>
+    </div>
+      <div class="image-container">
+        <div class="image">
+            <h6>Testing Breakdown</h6>
+		        <img src="img/diagrams/testingBreakdown.png" class="diagramImage" alt="Current Process Flow">
+        </div>
+
+        <div class="image">
+            <h6>Database Schema</h6>
+		        <img src="img/diagrams/databaseSchema.png" class="diagramImage" alt="Current Process Flow">
+        </div>
+    </div>
+
+
+          <div class="popup-image">
+            <span>&times;</span>
+            <img src="img/diagrams/current_processflow.png" alt="">
+          </div>
+
+    <script>
+      document.querySelectorAll('.image-container img').forEach(image =>{
+        image.onclick = () =>{
+          document.querySelector('.popup-image').style.display ='block';
+          document.querySelector('.popup-image img').src = image.getAttribute('src');
+        }
+      });
+
+      document.querySelector('.popup-image span').onclick = () =>{
+        document.querySelector('.popup-image').style.display ='none';
+      }
+    </script>
+
+  </div>
+
+</div>
+
+
+</section>
+<!-- END GRID3 : DELIVERABLES -->
+
+
+
+<!-- START : PROTOTYPES -->
+<section id="prototype">
+
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-twothird">
+      <h1>Prototype</h1>
+      <h5 class="w3-padding-32">
+    	    Showcasing the mock-ups...
+        </h5>
+    </div>
+    <i class="fa fa-solid fa-wrench w3-text-red"></i>
+
+    <div class="content">
+      <div class="w3-padding-32 w3-center">
+        <h3 class="w3-padding-16">Weekly Development Report</h3>
+        <iframe width="85%" height="470" src="https://docs.google.com/document/d/e/2PACX-1vTW1N5l8hTZB7uNeyWvDqAvekUPLYdbdt8-WfOnH-xJG-8z8OyZ_D5hjwDU4BgRWhBLwHKDP0SSox5d/pub?embedded=true"></iframe>
+      </div>
+
+      <div class="w3-padding-32 w3-center">
+        <h3 class="w3-padding-16">Prototype MFCD</h3>
+        <img width="1050px" src="./img/prototype/prototype_mfcd.png" alt="Prototype MFCD">
+      </div>
+
+      <div class="w3-padding-32 w3-center">
+        <h3 class="w3-padding-16">RWP vs Prototype</h3>
+        <img height="1700px;" src="./img/prototype/protovsrwp_draft1.png" alt="Proto vs RWP">
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- END : PROTOTYPES -->
+
+
+
+<!-- START GRID : Labs -->
+<section id="labs">
+
+    <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+      <div class="w3-content">
+        <div class="w3-twothird">
+          <h1>Labs</h1>
+          <h5 class="w3-padding-32">
+    	      Describing the solution...
+        </h5>
+      </div>
+      <div class="w3-third w3-center">
+        <i class="fa fa-grav w3-padding-64 w3-text-red"></i>
+      </div>
+    </div>
+    <br>
+
+      <!-- </div> -->
+  <br>
+  <div class="w3-content w3-center">
+	  <h3>Lab 1 Collaborative outline:</h3>
+  <!--</div>
+  <div class="w3-content w3-threequarter">-->
+	<iframe width="85%" height="470" src="https://docs.google.com/document/d/e/2PACX-1vS_P5ifAveXY0LAAETi2-Qh-lRy9Qdcyw0-Fl2FjLz3OqH56hUdAwHYokDmQ8iIpTp0oK2z9KWhnJCE/pub?embedded=true"></iframe>
+	
+  <br>
+
+  </div>
+  <div class="w3-content">
+    <br>
+    <h3>Individual Labs (PDF downloads):</h3>
+    <table cellpadding="0" cellspacing="0" width="100%" border="0">
+      <tr>
+        <td width="40%">
+          <h4 style="text-align:left">Alex Bonn</h4>
+          <img src="img/team/alexbonn.jpg" width="140" heigh="140" style="float:left">
+
+              <a href="doc/lab1draft/abonn_lab1draft.pdf">
+                <strong>Lab 1 Draft</strong>
+              </a>
+              <br>
+        </td>
+        <td width="40%">
+          <h4 style="text-align:left">Alex Brown</h4>
+          <img src="img/team/alexbrown.jpg" width="140" heigh="140" style="float:left">
+
+              <a href="doc/lab1draft/abrown_lab1draft.pdf">
+                <strong>Lab 1 Draft</strong>
+              </a>
+              <br>
+        </td>
+      </tr>
+
+
+      <tr>
+        <td width="40%">
+          <h4 style="text-align:left">Kenny Dang</h4>
+          <img src="img/team/kennydang.jpg" width="140" heigh="140" style="float:left">
+
+              <a href="doc/lab1draft/kdang_lab1draft.pdf">
+                <strong>Lab 1 Draft</strong>
+              </a>
+              <br>
+        </td>
+        <td width="40%">
+          <h4 style="text-align:left">Natalie Graser</h4>
+          <img src="img/team/nataliegraser.jpg" width="140" heigh="140" style="float:left">
+
+              <a href="doc/lab1draft/ngraser_lab1draft.pdf">
+                <strong>Lab 1 Draft</strong>
+              </a>
+              <br>
+        </td>
+      </tr>
+
+
+      <tr>
+        <td width="40%">
+          <h4 style="text-align:left">Wesley Irel&alpha;nd</h4>
+          <img src="img/team/wesley.jpg" width="140" heigh="140" style="float:left">
+
+              <a href="doc/lab1draft/wesleyi_lab1draft.pdf">
+                <strong>Lab 1 Draft</strong>
+              </a>
+              <br>
+        </td>
+        <td width="40%">
+          <h4 style="text-align:left">Marissa Loya</h4>
+          <img src="img/team/marissaloya.jpg" width="140" heigh="140" style="float:left">
+
+              <a href="doc/lab1draft/mloya_lab1draft.pdf">
+                <strong>Lab 1 Draft</strong>
+              </a>
+              <br>
+        </td>
+      </tr>
+
+
+      <tr>
+        <td width="40%">
+          <h4 style="text-align:left">Wesley O'steen</h4>
+          <img src="img/team/wesleyosteen.jpg" width="140" heigh="140" style="float:left">
+
+              <a href="doc/lab1draft/wosteen_lab1draft.pdf">
+                <strong>Lab 1 Draft</strong>
+              </a>
+              <br>
+        </td>
+       
+      </tr>
+
+      </table>
+    </div>
+  </div>
+
+</div>
+</section>
+<!-- END GRID3 : DELIVERABLES -->
+
+
+
+
+
+
+<!-- START : USER STORIES -->
+
+<section id="userstories">
+
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-twothird">
+      <h1>User Stories</h1>
+      <br>
+      <h3>As an at-risk user seeking help...</h3>
+      <ul style="font-size: 16px">
+        <li>...I want a way to convey what kind of help I need and receive guidance towards that help.</li>
+        <li>...I want to filter search results to my essential needs.</li>
+        <li>...I want to be able to see a map showing locations of nearby services.</li>
+        <li>...I want to see any feedback on whether a location is safe.</li>
+        <li>...I want to be able to ask for outreach services to come and help me where I am.</li>
+      </ul>
+
+      <h3>As a user looking to volunteer...</h3>
+      <ul style="font-size: 16px">
+        <li>...I want to see a map showing locations of places needing volunteers.</li>
+        <li>...I want an indication of what types of volunteer roles are available.</li>
+        <li>...I want to see any notifications or expectations from an organization to potential volunteers like me.</li>
+        <li>...I want to see some community feedback on an organization or location before I show up.</li>
+      </ul>
+
+      <h3>As a user representing a program or organization...</h3>
+      <ul style="font-size: 16px">
+        <li>...I want to be able to easily convey information about our services and what we provide.</li>
+        <li>...I want the option to get communication on who needs our outreach and where.</li>
+        <li>...I want to see feedback about our organization.</li>
+        <li>...I want to see metrics about user traffic to our program site.</li>
+      </ul>
+
+      <h3>As a general user...</h3>
+      <ul style="font-size: 16px">
+        <li>...I want to be able to browse content without a requirement to log into an account.</li>
+        <li>...When I see misleading information on an organization's page, I want the means to convey how it is misleading, 
+          and preferably without the requirement to login.</li>
+      </ul>
+    </h5>
+
+    </div>
+
+    <div class="w3-third w3-center">
+      <i class="fa fa-solid fa-book w3-padding-64 w3-text-red"></i>
+    </div>
+  </div>
+</div>
+
+
+</section>
+
+<!-- END : USER STORIES -->
+
+
+
+
+
+<!-- START GRID4 : TEAM -->
+<section id="team">
+	<br>
+	<!-- TODO: make pretty? -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-third w3-center">
+	    <!--<i class="fa fa-coffee w3-padding-64 w3-text-red w3-margin-right">&#8659;</i>-->
+      <i class="fa fa-hand-spock-o w3-text-red w3-padding"></i>
+    </div>
+    
+    <h1>Meet the Team</h1>
+    <h5 class="w3-padding-32">Team Green Members</h5>
+    
+    <!--<div class="teamGreenTogether"> 
+    <img src="img/team/teamgreentogether.png" class="" alt="">
+    </div>
+    -->
+  </div>
+  </div>
+  </section>
+
+    <!-- individual members -->
+  <div class="wrapper w3-light-grey w3-padding-16	">
+    <div class="row">
+	    <div class="team-member">
+		    <h3>Alex Bonn</h3>
+          <div class="member-img">
+		        <img src="img/team/alexbonn.jpg" class="team-memberImage" alt="">
+          </div>
+          <h4>Back-End Developer</h4>
+		      <p class="text-muted">
+		      Alex is a senior in the computer science program at Old Dominion University and plans to work as a software developer after graduation at the end of 2022. He has almost 10 years of IT experience including 5 years in the Navy. Alex currently works as a systems engineer where his primary responsibility is to provide Linux systems administration to a large network of Red Hat servers.
+		      </p>
+	    </div>
+
+	    <div class="team-member">
+		    <h3>Alex Brown</h3>
+          <div class="member-img">
+		        <img src="img/team/alexbrown.jpg" class="team-memberImage" alt="">
+          </div>
+          <h4>Technical Writer</h4>
+		      <p class="text-muted">
+		      Alex Brown has held numerous positions in the service industry, giving him unique insight into consumer psychology and customer facing operations. He has also served 4 years in the United States Navy. Alex is now a senior undergraduate in Computer Science at Old Dominion University.
+		      </p>
+	    </div>
+
+      <div class="team-member">
+		    <h3>Kenny Dang</h3>
+          <div class="member-img">
+		        <img src="img/team/kennydang.jpg" class="team-memberImage" alt="">
+          </div>
+          <h4>Front-End Developer</h4>
+		      <p class="text-muted">
+		      Kenny Dang is currently a senior majoring in computer science at Old Dominion University. He recently obtained a position as a Front-End Developer at the Engineering Management & Systems Engineering Department at ODU. He is eager to further his experience in a professional work setting and develop and refine his technical skills. After graduation, he plans to pursue a career as a software engineer or front-end developer.
+		      </p>
+	    </div>
+
+    <div class="team-member">
+		    <h3>Natalie Graser</h3>
+          <div class="member-img">
+		        <img src="img/team/nataliegraser.jpg" class="team-memberImage" alt="">
+          </div>
+          <h4>DevOps Engineer</h4>
+		      <p class="text-muted">
+		      Natalie is currently a senior in the Computer Science program at Old Dominion University while simultaneously beginning her Masters degree in the same through ODU's linked program. After gaining experience as a DevOps engineer for a small company, Natalie now mostly works with hardware in support of the cloud for Amazon Web Services (AWS). From her time spent at a small military school, Northern Virginia Community College, ODU, and in her professional career, Natalie has gained experience in a broad range of programming languages and computer science fundamentals.
+		      </p>
+	    </div>
+
+    <div class="row">
+	    <div class="team-member">
+		    <h3>Wesley Irel&alpha;nd</h3>
+          <div class="member-img">
+		        <img src="img/team/wesley.jpg" class="team-memberImage" alt="">
+          </div>
+          <h4>Project Lead</h4>
+		      <p class="text-muted">
+		      Wesley has ten years of experience working directly on Linux systems administration, networking, virtualization and embedded systems. Before that, he spent nine years in the military. Wesley is now a senior undergradate in Computer Science at Old Dominion University.
+		      </p>
+	    </div>
+    
+    	<div class="team-member">
+		    <h3>Marissa Loya</h4>
+          <div class="member-img">
+		        <img width="360px"src="img/team/marissaloya.jpg" class="team-memberImage" alt="">
+          </div>
+          <h4>Database Architect</h4>
+		      <p class="text-muted">
+		      Marissa is a senior undergraduate student in Computer Science at Old Dominion University. She has professional experience in customer service, database maintenance, data-entry, and currently interns part-time for Jefferson Lab’s Industrial Hygienist Department in Newport News, VA. After completing her undergraduate program in December, 2022, Marissa hopes to obtain a permanent position in Project Management or Quality Assurance in the IT field.
+		      </p>
+	    </div>
+
+	    <div class="team-member">
+		    <h3>Wesley O'Steen</h3>
+          <div class="member-img">
+		        <img src="img/team/wesleyosteen.jpg" class="team-memberImage" alt="">
+          </div>
+          <h4>Back-End Developer</h4>
+		      <p class="text-muted">
+		      Wesley O'Steen is a senior undergraduate student at ODU studying Computer Science. Since enlisting in the Army in 2014, he's had training on using and maintaining surveillance systems to include small unmanned aerial vehicles and advanced camera technology. During that time, he has also worked with a variety of programming languages. After graduating, Wesley hopes to continue working with computers in the Army.
+		      </p>
+	    </div>
+    </div>
+    </div>
+  </div>
+<!-- END GRID4 : TEAM -->
+
+
+
+
+<section id="glossary">
+	<br>
+	<!-- TODO: make pretty? -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-third w3-center">
+	    <!--<i class="fa fa-coffee w3-padding-64 w3-text-red w3-margin-right">&#8659;</i>-->
+      <!-- <i class="fa fa-hand-spock-o w3-padding-64 w3-text-red w3-margin-right"></i> -->
+    </div>
+    <h3>Glossary</h3>
+    <ul>
+      <li><b>501c3 Organization</b> - An organization or group that is tax exempt, often due to providing charitable services through non-profit or not-for-profit methods.</li>
+      <li><b>At-risk Individual</b> - A person with ongoing risks to health or safety.</li>
+      <li><b>API/Google API</b> - Application programming interface is a connection between computers or between computer programs. Programmatic interfaces to Google Cloud Platform services.</li>
+      <li><b>Google Maps</b> - A free-to-use service on the World-Wide Web that provides map display, locations and localization.</li>
+      <li><b>GUI (Graphical User Interface)</b> - A human-computer interface that uses windows, icons, and menus that can be manipulated by a mouse (and often to a limited extent by a keyboard as well).</li>
+      <li><b>Spam</b> – Unwanted, unsolicited digital communication sent in bulk, often by an automated program.</li>
+      <li><b>Stakeholder</b> - Person with an interest or concern in something, especially a business.</li>
+      <li><b>Uniform Resource Locator</b> – URL; a human-readable name used by internet protocols to locate an asset on the internet.</li>
+      <li><b>Major Functional Component Diagram</b> - Used in modeling the physical aspects of object-oriented systems that are used for visualizing, specifying, and documenting component-based systems.</li>
+      <li><b>Web Server</b> - Software and hardware that uses HTTP and other protocols to respond to client requests made over the World Wide Web.</li>
+      <li><b>Web Scraping</b> - Automatic method to obtain large amounts of data from websites.</li>
+    </ul>
+
+  </div>
+</div>
+</section>
+
+<section id="references">
+	<br>
+	<!-- TODO: make pretty? -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-third w3-center">
+	    <!--<i class="fa fa-coffee w3-padding-64 w3-text-red w3-margin-right">&#8659;</i>-->
+      <!-- <i class="fa fa-hand-spock-o w3-padding-64 w3-text-red w3-margin-right"></i> -->
+    </div>
+    <h3>References</h3>
+    <br>
+    [1]  National Coalition for the Homeless. 2022. Homelessness in America. [online] Available at: <https://nationalhomeless.org/about-homelessness/> [Accessed 20 January 2022].
+  <br>
+  [2]  Homeless Deaths Count. 2022. Homeless Deaths Count. [online] Available at: <https://homelessdeathscount.org/> [Accessed 20 January 2022].
+  <br>
+  [3]  Ashcroft, R., Sur, D., Greenblatt, A. and Donahue, P., 2022. The Impact of the COVID-19 Pandemic on Social Workers at the Frontline: A Survey of Canadian Social Workers. [online] Available at: <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8406887/> [Accessed 20 January 2022]
+  <br>
+  [4]   Office of Policy Development and Research, 2022. Strategies for Improving Homeless People's Access to Mainstream Benefits and Services. [online] Huduser.gov. Available at: <https://www.huduser.gov/portal/publications/strategiesaccessbenefitsservices.pdf> [Accessed 20 January 2022].
+  <br>
+  [5]    The Charity CFO, 2022. Nonprofit Legal Pitfalls: A Complete Guide to Avoid Disaster. [online] Thecharitycfo.com. Available at: <https://thecharitycfo.com/nonprofit-legal-pitfalls-a-complete-guide-to-avoid-disaster/> [Accessed 20 January 2022].
+  <br>
+  [6]   Rhoades, H., Wenzel, S., Rice, E., Winetrobe, H. and Henwood, B., 2022. No digital divide? Technology use among homeless adults. [online] Socialinnovation.usc.edu. Available at: <https://socialinnovation.usc.edu/wp-content/uploads/2018/02/Rhoades-et-al-2017-final.pdf> [Accessed 20 January 2022].
+  <br>
+  [7]   David, 2020.  The Top Ten Digital Challenges Facing the Charity Sector. [online] medium.com. Available at <https://medium.com/wethecatalysts/the-top-ten-digital-challenges-facing-the-charity-sector-2144789aec14> [Accessed 20 January 2022]
+  <br>
+  [8]   https://www.usich.gov/homelessness-statistics/va/
+  <br>
+  [9]    Minton, S. and Giannarelli, L., 2019. Five Things You May Not Know About the US Social Safety Net. [online] urban.org. Available at: <https://www.urban.org/sites/default/files/publication/99674/five_things_you_may_not_know_about_the_us_social_safety_net_1.pdf>
+  <br>
+  [10]   https://www.edelman.com/trust/2020-trust-barometer
+
+  </div>
+</div>
+</section>
+
+
+
+
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity">
+
+ <!-- ODU LINKS -->
+ <div class="links">
+ <h3><a href="https://www.odu.edu/" target="_blank">Old Dominion University</a></h3>
+ <h3><a href="https://www.odu.edu/" target="_blank">ODU CS Department</a></h3>
+ </div>
+
+ <br>
+
+ <h5>Copyright © Team Green Fall 2022</h5>
+
+</footer>
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+
+<!--- End css template. -->
+
+
+</body>
+</html>
