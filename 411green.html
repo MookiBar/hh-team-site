@@ -20,122 +20,80 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="" />
-    <title>CS-411W Team Green | Home</title>
+    <title>HH - Team Green | Home</title>
   </head>
 
-  <body id="page-top" class="index">
+  <body>
     <!--- The actual css template. --->
 
     <!-- Navbar -->
-    <div id="navv" class="w3-top">
-      <div class="w3-bar w3-red w3-card w3-right-align w3-large">
-        <a
-          class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red"
-          href="javascript:void(0);"
-          onclick="myFunction()"
-          title="Toggle Navigation Menu"
-          ><i class="fa fa-bars"></i
-        ></a>
-        <a
-          href="index.html"
-          class="w3-bar-item w3-button w3-padding-large w3-white"
-          >Home</a
-        >
-        <a
-          href="problem-solution.html"
-          class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"
-          >Problem</a
-        >
-        <a
-          href="problem-solution.html#solution"
-          class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"
-          >Solution</a
-        >
-        <a
-          href="presentations.html"
-          class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"
-          >Presentations</a
-        >
-        <a
-          href="deliverables.html"
-          class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"
-          >Deliverables</a
-        >
-        <a
-          href="prototype.html"
-          class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"
-          >Prototype</a
-        >
-        <a
-          href="labs.html"
-          class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"
-          >Labs</a
-        >
-        <a
-          href="user-stories.html"
-          class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"
-          >User Stories</a
-        >
-        <a
-          href="team.html"
-          class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"
-          >Team</a
-        >
-        <a
-          href="sources.html"
-          class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"
-          >Sources</a
-        >
-      </div>
-
-      <!-- Navbar on small screens -->
-      <div
-        id="navDemo"
-        class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large"
-      >
-        <a
-          href="problem-solution.html"
-          class="w3-bar-item w3-button w3-padding-large"
-          >Problem</a
-        >
-        <a
-          href="problem-solution.html#solution"
-          class="w3-bar-item w3-button w3-padding-large"
-          >Solution</a
-        >
-        <a
-          href="presentations.html"
-          class="w3-bar-item w3-button w3-padding-large"
-          >Presentations</a
-        >
-        <a
-          href="deliverables.html"
-          class="w3-bar-item w3-button w3-padding-large"
-          >Deliverables</a
-        >
-        <a
-          href="labs.html"
-          class="w3-bar-item w3-button w3-padding-large"
-          >Labs</a
-        >
-        <a
-          href="user-stories.html"
-          class="w3-bar-item w3-button w3-padding-large"
-          >User Stories</a
-        >
-        <a
-          href="team.html"
-          class="w3-bar-item w3-button w3-padding-large"
-          >Team</a
-        >
-        <a
-          href="sources.html"
-          class="w3-bar-item w3-button w3-padding-large"
-          >Sources</a
-        >
-      </div>
+<div id="hh-nav" class="w3-bar w3-red w3-card w3-left-align w3-large">
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+    <a href="problem-solution.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Problem</a>
+    <a href="problem-solution.html#solution" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Solution</a>    
+  
+    <!-- Presentations -->
+    <div class="w3-dropdown-hover">
+    <a href="./presentations.html"><button class="w3-button w3-hide-small w3-padding-large w3-hover-white">Presentations</button></a>
+    <div class="w3-dropdown-content w3-bar-block w3-card-4">
+      <a href="./presentations.html#finalprototype" class="w3-bar-item w3-button w3-hide-small">Final Demo</a>
+      <a href="./presentations.html#prototype3" class="w3-bar-item w3-button w3-hide-small">Prototype #3 Demo</a>
+      <a href="./presentations.html#prototype2" class="w3-bar-item w3-button w3-hide-small">Prototype #2 Demo</a>
+      <a href="./presentations.html#prototypePres" class="w3-bar-item w3-button w3-hide-small">Original Prototype</a>
+      <a href="./presentations.html#design" class="w3-bar-item w3-button w3-hide-small">Design</a>
+      <a href="./presentations.html#feasibilityv2" class="w3-bar-item w3-button w3-hide-small">Feasibility v2</a>
+      <a href="./presentations.html#feasibilityv1" class="w3-bar-item w3-button w3-hide-small">Feasibility v1</a>
+      <a href="./presentations.html#original" class="w3-bar-item w3-button w3-hide-small">Original Problem</a>
     </div>
+  </div>
 
+  <!-- Deliverables -->
+  <div class="w3-dropdown-hover">
+    <a href="./deliverables.html"><button class="w3-button w3-button w3-hide-small w3-padding-large w3-hover-white">Deliverables</button></a>
+    <div class="w3-dropdown-content w3-bar-block w3-card-4">
+      <a href="./deliverables.html#feasibility" class="w3-bar-item w3-button w3-hide-small">Feasibility</a>
+      <a href="./deliverables.html#algorithms" class="w3-bar-item w3-button w3-hide-small">Algorithms</a>
+      <a href="./deliverables.html#workbreakdown" class="w3-bar-item w3-button w3-hide-small">Work Breakdown</a>
+      <a href="./deliverables.html#prototype" class="w3-bar-item w3-button w3-hide-small">Prototype</a>
+    </div>
+  </div>
+
+  <!-- Prototype -->
+  <div class="w3-dropdown-hover">
+    <a href="./prototype.html"><button class="w3-button w3-hide-small w3-padding-large w3-hover-white">Prototype</button></a>
+    <div class="w3-dropdown-content w3-bar-block w3-card-4">
+      <a href="./prototype.html#prototypewebsite" class="w3-bar-item w3-button w3-hide-small">Prototype Website</a>
+      <a href="./prototype.html#weeklydevreport" class="w3-bar-item w3-button w3-hide-small">Weekly Development Report</a>
+      <a href="./prototype.html#finalpresentation" class="w3-bar-item w3-button w3-hide-small">Final Presentation</a>
+      <a href="./prototype.html#sitemap" class="w3-bar-item w3-button w3-hide-small">Site Map</a>
+      <a href="./prototype.html#databaseschema" class="w3-bar-item w3-button w3-hide-small">Database Schema</a>
+      <a href="./prototype.html#mfcd" class="w3-bar-item w3-button w3-hide-small">MFCD</a>
+      <a href="./prototype.html#rwpvsproto" class="w3-bar-item w3-button w3-hide-small">RWP vs Prototype</a>
+    </div>
+  </div>
+
+  <!-- Labs -->
+  <div class="w3-dropdown-hover">
+    <a href="./labs.html"><button class="w3-button w3-button w3-hide-small w3-padding-large w3-hover-white">Labs</button></a>
+    <div class="w3-dropdown-content w3-bar-block w3-card-4">
+      <a href="./labs.html#lab1collab" class="w3-bar-item w3-button w3-hide-small">Lab 1 Collaborative Outline</a>
+      <a href="./labs.html#lab2collab" class="w3-bar-item w3-button w3-hide-small">Lab 2 Collaborative Outline</a>
+      <a href="./labs.html#lab2final" class="w3-bar-item w3-button w3-hide-small">Lab 2 Section 3 Final</a>
+      <a href="./labs.html#lab3collab" class="w3-bar-item w3-button w3-hide-small">Lab 3 Collaborative Outline</a>
+      <a href="./labs.html#lab3draft" class="w3-bar-item w3-button w3-hide-small">Lab 3 Draft</a>
+      <a href="./labs.html#lab3final" class="w3-bar-item w3-button w3-hide-small">Lab 3 Final</a>
+      <a href="./labs.html#lab4collab" class="w3-bar-item w3-button w3-hide-small">Lab 4 Collaborative Outline</a>
+      <a href="./labs.html#lab4draft" class="w3-bar-item w3-button w3-hide-small">Lab 4 Draft</a>
+      <a href="./labs.html#lab4final" class="w3-bar-item w3-button w3-hide-small">Lab 4 Final</a>
+      <a href="./labs.html#individuallab" class="w3-bar-item w3-button w3-hide-small">Individual Labs</a>
+
+    </div>
+  </div>
+  <a href="user-stories.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">User Stories</a>
+  <a href="poster.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Poster</a>
+  <a href="team.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Team</a>
+  <a href="sources.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Sources</a>
+</div>
     <!-- Header -->
 
     <section id="home">
@@ -166,7 +124,10 @@
           >
         </h3>
         <h3>
-          <a href="https://www.odu.edu/" target="_blank">ODU CS Department</a>
+          <a href="https://ww1.odu.edu/compsci" target="_blank">ODU CS Department</a>
+        </h3>
+        <h3>
+            <a href="https://www.helpinghandsconnect.org" target="_blank">Helping Hands Prototype Website</a>
         </h3>
       </div>
 
@@ -191,3 +152,4 @@
     <!--- End css template. -->
   </body>
 </html>
+
